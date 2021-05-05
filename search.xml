@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Extended Markdown syntax</title>
+    <url>/template-hexo-next/Hexo/adv-syntax/</url>
+    <content><![CDATA[<p>This post shows tag plugins, an extension of Markdown syntax, in Hexo static site generator and the Next theme <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">documentation<i class="fa fa-external-link-alt"></i></span></p>
+<span id="more"></span>
+<p>The following sections will be</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">What you write in Markdown</span><br></pre></td></tr></table></figure>
+<p>What would be rendered</p>
+<h2 id="Quotes"><a class="header-anchor" href="#Quotes"></a>Quotes</h2>
+<h3 id="Centered-Quote"><a class="header-anchor" href="#Centered-Quote"></a>Centered Quote</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zLyNDZW50ZXJlZC1RdW90ZQ==">Centered Quote@Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% centerquote %&#125;Something&#123;% endcenterquote %&#125;</span><br><span class="line">&lt;!-- Or in short --&gt;</span><br><span class="line">&#123;% cq %&#125;Something&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center">
+<p>Elegant in code, simple in core</p>
+
+</blockquote>
+<h3 id="Pull-Quote"><a class="header-anchor" href="#Pull-Quote"></a>Pull Quote</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNQdWxsLVF1b3Rl">Pull Quote@Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<p>Similar to the regular markdown <code>&gt;</code> quote.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% pullquote %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endpullquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="pullquote"><p>content</p>
+</blockquote>
+<h3 id="Block-Quote"><a class="header-anchor" href="#Block-Quote"></a>Block Quote</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNCbG9jay1RdW90ZQ==">Block Quote @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<p>With author and book title.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+<h2 id="Code-blocks"><a class="header-anchor" href="#Code-blocks"></a>Code blocks</h2>
+<h3 id="Hexo-tag-plugin"><a class="header-anchor" href="#Hexo-tag-plugin"></a>Hexo tag plugin</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNDb2RlLUJsb2Nr">Code Block @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] [additional options] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% codeblock <span class="emphasis">_.compact lang:javascript http://underscorejs.org/#compact Underscore.js %&#125;</span></span><br><span class="line"><span class="emphasis">_</span>.compact([0, 1, false, 2, &#x27;&#x27;, 3]);</span><br><span class="line">=&gt; [1, 2, 3]</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>_.compact</span><span class="exturl" data-url="aHR0cDovL3VuZGVyc2NvcmVqcy5vcmcvI2NvbXBhY3Q=">Underscore.js<i class="fa fa-external-link-alt"></i></span></figcaption><table><tr><td class="code"><pre><span class="line">_.compact([<span class="number">0</span>, <span class="number">1</span>, <span class="literal">false</span>, <span class="number">2</span>, <span class="string">&#x27;&#x27;</span>, <span class="number">3</span>]);</span><br><span class="line">=&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="Github-gist"><a class="header-anchor" href="#Github-gist"></a>Github gist</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNHaXN0">Gist @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% gist stefanopalmieri/cdd42d4bd9c806c644de7e7ca86e59b0 %&#125;</span><br></pre></td></tr></table></figure>
+<script src="//gist.github.com/stefanopalmieri/cdd42d4bd9c806c644de7e7ca86e59b0.js"></script>
+<h3 id="Include-code"><a class="header-anchor" href="#Include-code"></a>Include code</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNJbmNsdWRlLUNvZGU=">Include Code @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<p>The directory containing code is defined at <code>code_dir</code> option in <code>_config.yml</code>, default to <code>code_dir: downloads/code</code>, corresponding to <code>$&#123;SITE&#125;/source/downloads/code</code></p>
+<div class="note default"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% include<span class="emphasis">_code [title] [lang:language] [from:line] [to:line] path/to/file %&#125;</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% include<span class="emphasis">_code lang:bash bootstrap-conda.sh %&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>bootstrap-conda.sh</span><a href="/template-hexo-next/code/bootstrap-conda.sh">view raw</a></figcaption><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line">CONDA_PATH=<span class="string">&quot;<span class="variable">${HOME}</span>/conda&quot;</span></span><br><span class="line">CONDA_SH=<span class="string">&quot;<span class="variable">${CONDA_PATH}</span>/etc/profile.d/conda.sh&quot;</span></span><br><span class="line">CONDA_URL=<span class="string">&quot;https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh&quot;</span></span><br><span class="line"></span><br><span class="line">wget -O /tmp/conda.sh <span class="string">&quot;<span class="variable">${CONDA_URL}</span>&quot;</span></span><br><span class="line">bash /tmp/conda.sh -bup <span class="string">&quot;<span class="variable">${CONDA_PATH}</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> <span class="string">&quot;<span class="variable">${CONDA_SH}</span>&quot;</span></span><br><span class="line">conda activate base</span><br><span class="line">conda init bash zsh</span><br><span class="line">conda config --add channels conda-forge</span><br><span class="line">conda config --<span class="built_in">set</span> channel_priority strict</span><br><span class="line">conda config --<span class="built_in">set</span> default_threads <span class="string">&quot;<span class="subst">$(nproc)</span>&quot;</span></span><br><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br><span class="line">conda update -n base conda --yes</span><br><span class="line">conda update --all --yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install commonly-used packages</span></span><br><span class="line">conda install jupyterlab seaborn scipy numpy pandas numba matplotlib --yes</span><br></pre></td></tr></table></figure>
+<h2 id="Link-to-other-post"><a class="header-anchor" href="#Link-to-other-post"></a>Link to other post</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMjSW5jbHVkZS1Qb3N0cw==">Include Posts @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% post<span class="emphasis">_link filename [title] [escape]  %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% post_</span>link emoji &quot;Emoji support&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<a href="#">Post not found: ssg/emoji Emoji support</a>
+<h2 id="Image"><a class="header-anchor" href="#Image"></a>Image</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCM=">Image@Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% img [class names] /path/to/image [width] [height] &#x27;&quot;title text&quot; &quot;alt text&quot;&#x27; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% img https://octodex.github.com/images/stormtroopocat.jpg 200 200 &#x27;&quot;The Stormtroopocat&quot; &quot;Alt text&quot;&#x27; %&#125;</span><br></pre></td></tr></table></figure>
+<img data-src="https://octodex.github.com/images/stormtroopocat.jpg" class="" width="200" height="200" title="The Stormtroopocat" alt="Alt text">
+<h2 id="Videos"><a class="header-anchor" href="#Videos"></a>Videos</h2>
+<h3 id="Direct-URL"><a class="header-anchor" href="#Direct-URL"></a>Direct URL</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL3ZpZGVvLmh0bWw=">video @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% video https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c4/Physicsworks.ogv/Physicsworks.ogv.240p.vp9.webm %&#125;</span><br></pre></td></tr></table></figure>
+<video src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c4/Physicsworks.ogv/Physicsworks.ogv.240p.vp9.webm" preload="metadata" controlslist="nodownload" controls playsinline poster=""></video>
+<h3 id="YouTube-videos"><a class="header-anchor" href="#YouTube-videos"></a>YouTube videos</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNZb3VUdWJl">YouTube @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% youtube JtUAAXe<span class="emphasis">_0VI %&#125;</span></span><br></pre></td></tr></table></figure>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/JtUAAXe_0VI" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="Vimeo"><a class="header-anchor" href="#Vimeo"></a>Vimeo</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNWaW1lbw==">Vimeo @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% vimeo 253989945 %&#125;</span><br></pre></td></tr></table></figure>
+<div class="video-container"><iframe src="https://player.vimeo.com/video/253989945" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h2 id="PDF-files"><a class="header-anchor" href="#PDF-files"></a>PDF files</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL3BkZi5odG1s">pdf @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<p>You'll need to enable <code>pdf</code> support in next theme's config</p>
+<figure class="highlight yaml"><figcaption><span>next/_config.next.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">pdf:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">height:</span> <span class="string">500px</span>  <span class="comment"># Default height</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% pdf url [height] %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><ol>
+<li>Only browsers supporting PDF embedding are supported.</li>
+<li>PDF file loading may be block by the <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvSFRUUC9DT1JT">CORS<i class="fa fa-external-link-alt"></i></span> policy.</li>
+</ol>
+</div>
+<h2 id="Note"><a class="header-anchor" href="#Note"></a>Note</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL25vdGUuaHRtbA==">note @ Next<i class="fa fa-external-link-alt"></i></span>. Similar to <span class="exturl" data-url="aHR0cHM6Ly9odWdvbG92ZWl0LmNvbS90aGVtZS1kb2N1bWVudGF0aW9uLWV4dGVuZGVkLXNob3J0Y29kZXMvIzQtYWRtb25pdGlvbg==">admonitions @ Hugo LoveIt<i class="fa fa-external-link-alt"></i></span>.</p>
+<figure class="highlight yml"><figcaption><span>_config.next.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># Note tag (bs-callout)</span></span><br><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bs-callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bs-callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">simple</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line"><span class="section">### Header</span></span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default %&#125;</span><br><span class="line"><span class="section">### Default Header</span></span><br><span class="line">Welcome to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line"><span class="section">### Primary Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line"><span class="section">### Info Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="section">### Success Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line"><span class="section">### Warning Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line"><span class="section">### Danger Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info no-icon %&#125;</span><br><span class="line"><span class="section">### No icon note</span></span><br><span class="line">Note <span class="strong">**without**</span> icon: <span class="code">`note info no-icon`</span></span><br><span class="line"></span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="section">### Codeblock in note</span></span><br><span class="line">&#123;% code %&#125;</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">&#123;% endcode %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default %&#125;</span><br><span class="line"><span class="section">### Table in Note</span></span><br><span class="line">| 1 | 2 |</span><br><span class="line">| - | - |</span><br><span class="line">| 3 | 4 |</span><br><span class="line">| 5 | 6 |</span><br><span class="line">| 7 | 8 |</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="note "><h3 id="Header"><a class="header-anchor" href="#Header"></a>Header</h3>
+<p>(without define class style)</p>
+</div>
+<div class="note default"><h3 id="Default-Header"><a class="header-anchor" href="#Default-Header"></a>Default Header</h3>
+<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note primary"><h3 id="Primary-Header"><a class="header-anchor" href="#Primary-Header"></a>Primary Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note info"><h3 id="Info-Header"><a class="header-anchor" href="#Info-Header"></a>Info Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note success"><h3 id="Success-Header"><a class="header-anchor" href="#Success-Header"></a>Success Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note warning"><h3 id="Warning-Header"><a class="header-anchor" href="#Warning-Header"></a>Warning Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note danger"><h3 id="Danger-Header"><a class="header-anchor" href="#Danger-Header"></a>Danger Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note info no-icon"><h3 id="No-icon-note"><a class="header-anchor" href="#No-icon-note"></a>No icon note</h3>
+<p>Note <strong>without</strong> icon: <code>note info no-icon</code></p>
+<p>note info, note info, note info
+note info, note info, note info
+note info, note info, note info</p>
+</div>
+<div class="note success"><h3 id="Codeblock-in-note"><a class="header-anchor" href="#Codeblock-in-note"></a>Codeblock in note</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br></pre></td></tr></table></figure></div>
+<div class="note default"><h3 id="Table-in-Note"><a class="header-anchor" href="#Table-in-Note"></a>Table in Note</h3>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Tabs"><a class="header-anchor" href="#Tabs"></a>Tabs</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL3RhYnMuaHRtbA==">tabs @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<div class="note default"><figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Sixth Unique name %&#125;</span><br><span class="line">&lt;!-- tab Solution 1@text-width --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab Solution 2 @font --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab Solution 3@bold --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="tabs" id="sixth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#sixth-unique-name-1"><i class="fa fa-text-width"></i>Solution 1</a></li><li class="tab"><a href="#sixth-unique-name-2"><i class="fa fa-font"></i>Solution 2</a></li><li class="tab"><a href="#sixth-unique-name-3"><i class="fa fa-bold"></i>Solution 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sixth-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="sixth-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="sixth-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<p>Define a tab via <code>&lt;!-- tab title @icon --&gt; ... &lt;!-- endtab --&gt;</code>. Both <code>title</code> and <code>font</code> are optional.</p>
+<h2 id="Label"><a class="header-anchor" href="#Label"></a>Label</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2xhYmVsLmh0bWw=">label @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<p>Similar to <code>==mark==</code> in <code>markdown-it</code>, but with more options.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Lorem &#123;% label @ipsum %&#125; &#123;% label primary@dolor sit %&#125; amet, consectetur &#123;% label success@adipiscing elit, %&#125; sed &#123;% label info@do eiusmod %&#125; tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim <span class="emphasis">*&#123;% label warning @ad %&#125;*</span> minim veniam, quis <span class="strong">**&#123;% label danger@nostrud %&#125;**</span> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span><br><span class="line"></span><br><span class="line">Duis aute irure dolor in reprehenderit in voluptate ~~&#123;% label default @velit %&#125;~~ <span class="xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>esse<span class="xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure>
+<p>Lorem <mark class="label ">ipsum</mark> <mark class="label primary">dolor sit</mark> amet, consectetur <mark class="label success">adipiscing elit,</mark> sed <mark class="label info">do eiusmod</mark> tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim <em><mark class="label warning">ad</mark></em> minim veniam, quis <strong><mark class="label danger">nostrud</mark></strong> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate <s><mark class="label default">velit</mark></s> <mark>esse</mark> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 id="Button"><a class="header-anchor" href="#Button"></a>Button</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2J1dHRvbi5odG1s">button @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% btn #, Text %&#125;&#123;% btn #, Text &amp; Title,, Title %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- with icon --&gt;</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span>&#123;% btn #,, home %&#125;&#123;% btn #,, home %&#125;&#123;% btn #,, home %&#125;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span>&#123;% btn #, Text &amp; Icon (buggy), home %&#125;</span><br><span class="line">&#123;% btn #, Text &amp; Icon (fixed width), home fa-fw %&#125;<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<a class="btn" href="#">Text</a><a class="btn" href="#" title="Title">Text & Title</a>
+<div><a class="btn" href="#"><i class="fa fa-home"></i></a><a class="btn" href="#"><i class="fa fa-home"></i></a><a class="btn" href="#"><i class="fa fa-home"></i></a></div>
+<p><a class="btn" href="#"><i class="fa fa-home"></i>Text & Icon (buggy)</a>
+<a class="btn" href="#"><i class="fa fa-home fa-fw"></i>Text & Icon (fixed width)</a></p>
+<h2 id="Link-Grid"><a class="header-anchor" href="#Link-Grid"></a>Link Grid</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2xpbmstZ3JpZC5odG1s">link-grid @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">% Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br></pre></td></tr></table></figure>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a href="https://theme-next.js.org/"></a>
+</div></div>
+<h2 id="Others"><a class="header-anchor" href="#Others"></a>Others</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLXR3L2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNpZnJhbWU=">iframes<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2dyb3VwLXBpY3R1cmVzLmh0bWw=">Group Pictures<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2Nhbml1c2UuaHRtbA==">Caniuse<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>tag plugin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Basic Markdown syntax</title>
+    <url>/template-hexo-next/Hexo/basic-syntax/</url>
+    <content><![CDATA[<p>This post showcases the basic Markdown syntax you'll see in major Markdown editors.</p>
+<span id="more"></span>
+<p>Taken from:</p>
+<ul>
+<li><span class="exturl" data-url="aHR0cDovL2xlYXJuLmdldGdyYXYub3JnL2NvbnRlbnQvbWFya2Rvd24=">Grav<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9odWdvbG92ZWl0LmNvbS9iYXNpYy1tYXJrZG93bi1zeW50YXgv">Hugo LoveIt theme<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9wYW5kb2Mub3JnL01BTlVBTC5odG1sI3BhbmRvY3MtbWFya2Rvd24=">Pandoc markdown<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+<p>The following sections will be</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">What you write in Markdown</span><br></pre></td></tr></table></figure>
+<p>{What would be rendered}</p>
+<h2 id="Headings"><a class="header-anchor" href="#Headings"></a>Headings</h2>
+<p>H1 heading <code># h1 Heading</code> could mess up the table of contents so it is not shown.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">## h2 Heading</span></span><br><span class="line"><span class="section">### h3 Heading</span></span><br><span class="line"><span class="section">#### h4 Heading</span></span><br><span class="line"><span class="section">##### h5 Heading</span></span><br><span class="line"><span class="section">###### h6 Heading</span></span><br></pre></td></tr></table></figure>
+<h2 id="h2-Heading"><a class="header-anchor" href="#h2-Heading"></a>h2 Heading</h2>
+<h3 id="h3-Heading"><a class="header-anchor" href="#h3-Heading"></a>h3 Heading</h3>
+<h4 id="h4-Heading"><a class="header-anchor" href="#h4-Heading"></a>h4 Heading</h4>
+<h5 id="h5-Heading"><a class="header-anchor" href="#h5-Heading"></a>h5 Heading</h5>
+<h6 id="h6-Heading"><a class="header-anchor" href="#h6-Heading"></a>h6 Heading</h6>
+<h2 id="Inline-HTML"><a class="header-anchor" href="#Inline-HTML"></a>Inline HTML</h2>
+<p>HTML tags are supported if you need a particular HTML tag or html comments.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">Paragraph in Markdown.</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">details</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">summary</span>&gt;</span>Epcot Center<span class="tag">&lt;/<span class="name">summary</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">details</span>&gt;</span></span><br><span class="line"></span><br><span class="line">Paragraph in Markdown.</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">This is a comment, you should not see me</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Paragraph in Markdown.</p>
+<details>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+<p>Paragraph in Markdown.</p>
+<!--
+This is a comment, you should not see me
+-->
+<h2 id="Horizontal-Rules"><a class="header-anchor" href="#Horizontal-Rules"></a>Horizontal Rules</h2>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="strong">**<span class="emphasis">*</span></span></span><br><span class="line"><span class="strong"><span class="emphasis"></span></span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Emphasis"><a class="header-anchor" href="#Emphasis"></a>Emphasis</h2>
+<p>Bold, italics, and strikethrough can be used either indivisually or in combination.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**rendered as bold text**</span></span><br><span class="line"></span><br><span class="line"><span class="strong">__rendered as bold text__</span></span><br><span class="line"></span><br><span class="line"><span class="emphasis">*rendered as italicized text*</span></span><br><span class="line"></span><br><span class="line"><span class="emphasis">_rendered as italicized text_</span></span><br><span class="line"></span><br><span class="line">~~Strike through this text~~</span><br><span class="line"></span><br><span class="line">==Marking this text==</span><br></pre></td></tr></table></figure>
+<p><strong>rendered as bold text</strong></p>
+<p><strong>rendered as bold text</strong></p>
+<p><em>rendered as italicized text</em></p>
+<p><em>rendered as italicized text</em></p>
+<p><s>Strike through this text</s></p>
+<p><mark>Marking this text</mark></p>
+<h2 id="Blockquotes"><a class="header-anchor" href="#Blockquotes"></a>Blockquotes</h2>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; <span class="strong">**Fusion Drive**</span> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.</span></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; This is a block quote.</span></span><br><span class="line">&gt;</span><br><span class="line"><span class="quote">&gt; &gt; A block quote within a block quote.</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.</p>
+</blockquote>
+<blockquote>
+<p>This is a block quote.</p>
+<blockquote>
+<p>A block quote within a block quote.</p>
+</blockquote>
+</blockquote>
+<h2 id="Superscripts-and-subscripts"><a class="header-anchor" href="#Superscripts-and-subscripts"></a>Superscripts and subscripts</h2>
+<p>(Disabled in favor of latex math syntax)</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">H~2~O is a liquid.  2^10^ is 1024.</span><br></pre></td></tr></table></figure>
+<h2 id="Lists"><a class="header-anchor" href="#Lists"></a>Lists</h2>
+<h3 id="Unordered"><a class="header-anchor" href="#Unordered"></a>Unordered</h3>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> Lorem ipsum dolor sit amet</span><br><span class="line"><span class="bullet">*</span> Consectetur adipiscing elit</span><br><span class="line"><span class="bullet">*</span> Integer molestie lorem at massa</span><br><span class="line"><span class="bullet">*</span> Facilisis in pretium nisl aliquet</span><br><span class="line"><span class="bullet">*</span> Nulla volutpat aliquam velit</span><br><span class="line"><span class="bullet">  *</span> Phasellus iaculis neque</span><br><span class="line"><span class="bullet">  *</span> Purus sodales ultricies</span><br><span class="line"><span class="bullet">  *</span> Vestibulum laoreet porttitor sem</span><br><span class="line"><span class="bullet">  *</span> Ac tristique libero volutpat at</span><br><span class="line"><span class="bullet">*</span> Faucibus porta lacus fringilla vel</span><br><span class="line"><span class="bullet">*</span> Aenean sit amet erat nunc</span><br><span class="line"><span class="bullet">*</span> Eget porttitor lorem</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit
+<ul>
+<li>Phasellus iaculis neque</li>
+<li>Purus sodales ultricies</li>
+<li>Vestibulum laoreet porttitor sem</li>
+<li>Ac tristique libero volutpat at</li>
+</ul>
+</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ul>
+<h3 id="Ordered"><a class="header-anchor" href="#Ordered"></a>Ordered</h3>
+<p>💡 If you just use 1. for each number, Markdown will automatically number each item.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> Lorem ipsum dolor sit amet</span><br><span class="line"><span class="bullet">2.</span> Consectetur adipiscing elit</span><br><span class="line"><span class="bullet">3.</span> Integer molestie lorem at massa</span><br><span class="line"><span class="bullet">4.</span> Facilisis in pretium nisl aliquet</span><br><span class="line"><span class="bullet">5.</span> Nulla volutpat aliquam velit</span><br><span class="line"><span class="bullet">6.</span> Faucibus porta lacus fringilla vel</span><br><span class="line"><span class="bullet">7.</span> Aenean sit amet erat nunc</span><br><span class="line"><span class="bullet">8.</span> Eget porttitor lorem</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Lorem ipsum dolor sit amet</li>
+<li>Consectetur adipiscing elit</li>
+<li>Integer molestie lorem at massa</li>
+<li>Facilisis in pretium nisl aliquet</li>
+<li>Nulla volutpat aliquam velit</li>
+<li>Faucibus porta lacus fringilla vel</li>
+<li>Aenean sit amet erat nunc</li>
+<li>Eget porttitor lorem</li>
+</ol>
+<h3 id="Ordered-but-custom-start-number"><a class="header-anchor" href="#Ordered-but-custom-start-number"></a>Ordered but custom start number</h3>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"> 9)  Ninth</span><br><span class="line">10)  Tenth</span><br><span class="line">11)  Eleventh</span><br><span class="line"><span class="code">       i. subone</span></span><br><span class="line"><span class="code">      ii. subtwo</span></span><br><span class="line"><span class="code">     iii. subthree</span></span><br></pre></td></tr></table></figure>
+<ol start="9">
+<li>Ninth</li>
+<li>Tenth</li>
+<li>Eleventh
+i. subone
+ii. subtwo
+iii. subthree</li>
+</ol>
+<h2 id="Task-lists"><a class="header-anchor" href="#Task-lists"></a>Task lists</h2>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] an unchecked task list item</span><br><span class="line"><span class="bullet">-</span> [x] checked item</span><br></pre></td></tr></table></figure>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> an unchecked task list item</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" checked="true" disabled="true"><label for="cbx_1"> checked item</label></li>
+</ul>
+<h2 id="Markdown-Code-blocks"><a class="header-anchor" href="#Markdown-Code-blocks"></a>Markdown Code blocks</h2>
+<p>Inline monospace</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`code here`</span></span><br></pre></td></tr></table></figure>
+<p><code>code here</code></p>
+<p>Block fenced code, with syntax highlighting</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">```python</span></span><br><span class="line"><span class="code">print(&quot;Hey!&quot;)</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hey!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="Tables"><a class="header-anchor" href="#Tables"></a>Tables</h2>
+<p>See <span class="exturl" data-url="aHR0cHM6Ly93d3cudGFibGVzZ2VuZXJhdG9yLmNvbS9tYXJrZG93bl90YWJsZXM=">tables generator<i class="fa fa-external-link-alt"></i></span> for table syntax.
+Use use editors like typora or marktext to edit tables with ease.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| Option | Description |</span><br><span class="line">| ------ | ----------- |</span><br><span class="line">| data   | path to data files to supply the data that will be passed into templates. |</span><br><span class="line">| engine | engine to be used for processing templates. Handlebars is the default. |</span><br><span class="line">| ext    | extension to be used for dest files. |</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>path to data files to supply the data that will be passed into templates.</td>
+</tr>
+<tr>
+<td>engine</td>
+<td>engine to be used for processing templates. Handlebars is the default.</td>
+</tr>
+<tr>
+<td>ext</td>
+<td>extension to be used for dest files.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Simple-tables"><a class="header-anchor" href="#Simple-tables"></a>Simple tables</h3>
+<p>(Pandoc only)</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">  Right     Left     Center     Default</span><br><span class="line">-------     ------ ----------   -------</span><br><span class="line"><span class="code">     12     12        12            12</span></span><br><span class="line"><span class="code">    123     123       123          123</span></span><br><span class="line"><span class="code">      1     1          1             1</span></span><br></pre></td></tr></table></figure>
+<h3 id="Grid-tables"><a class="header-anchor" href="#Grid-tables"></a>Grid tables</h3>
+<p>(Pandoc only)</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">+---------------+---------------+--------------------+</span><br><span class="line">| Fruit         | Price         | Advantages         |</span><br><span class="line">+===============+===============+====================+</span><br><span class="line">| Bananas       | $1.34         | - built-in wrapper |</span><br><span class="line">|               |               | - bright color     |</span><br><span class="line">+---------------+---------------+--------------------+</span><br><span class="line">| Oranges       | $2.10         | - cures scurvy     |</span><br><span class="line">|               |               | - tasty            |</span><br><span class="line">+---------------+---------------+--------------------+</span><br><span class="line"></span><br><span class="line">+---------------+---------------+--------------------+</span><br><span class="line">| Right         | Left          | Centered           |</span><br><span class="line">+==============:+:==============+:==================:+</span><br><span class="line">| Bananas       | $1.34         | built-in wrapper   |</span><br><span class="line">+---------------+---------------+--------------------+</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Links"><a class="header-anchor" href="#Links"></a>Links</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;https:&#x2F;&#x2F;assemble.io&gt;</span><br><span class="line">&lt;contact@revolunet.com&gt;</span><br><span class="line">[Assemble](https:&#x2F;&#x2F;assemble.io)</span><br><span class="line">[Upstage](https:&#x2F;&#x2F;github.com&#x2F;upstage&#x2F; &quot;Visit Upstage!&quot;)</span><br></pre></td></tr></table></figure>
+<p><span class="exturl" data-url="aHR0cHM6Ly9hc3NlbWJsZS5pbw==">https://assemble.io<i class="fa fa-external-link-alt"></i></span>
+<span class="exturl" data-url="bWFpbHRvOmNvbnRhY3RAcmV2b2x1bmV0LmNvbQ==">contact@revolunet.com<i class="fa fa-external-link-alt"></i></span>
+<span class="exturl" data-url="aHR0cHM6Ly9hc3NlbWJsZS5pbw==">Assemble<i class="fa fa-external-link-alt"></i></span>
+<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Vwc3RhZ2Uv" title="Visit Upstage!">Upstage<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="Footnotes"><a class="header-anchor" href="#Footnotes"></a>Footnotes</h2>
+<p>💡 Footnotes are automatically numbered.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is a digital footnote[^1].</span><br><span class="line">This is a footnote with &quot;label&quot;[^label]</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">This is a digital footnote</span></span><br><span class="line">[<span class="symbol">^label</span>]: <span class="link">This is a footnote with &quot;label&quot;</span></span><br></pre></td></tr></table></figure>
+<p>This is a digital footnote<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>
+This is a footnote with &quot;label&quot;<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<h2 id="Keyboard-strokes"><a class="header-anchor" href="#Keyboard-strokes"></a>Keyboard strokes</h2>
+<p>Needs <span class="exturl" data-url="aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvbWFya2Rvd24taXQta2Jk">markdown-it-kbd<i class="fa fa-external-link-alt"></i></span>.</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[[Ctrl]] + [[Alt]] + [[Delete]]</span><br></pre></td></tr></table></figure>
+<p><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Delete</kbd></p>
+<h2 id="Images"><a class="header-anchor" href="#Images"></a>Images</h2>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Minion</span>](<span class="link">https://octodex.github.com/images/minion.png</span>)</span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">https://octodex.github.com/images/stormtroopocat.jpg &quot;The Stormtroopocat&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img data-src="https://octodex.github.com/images/minion.png" alt="Minion">
+<img data-src="https://octodex.github.com/images/stormtroopocat.jpg" alt="Alt text" title="The Stormtroopocat"></p>
+<p>You can <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdpdGh1Yi5jb20vZW4vZ2l0aHViL21hbmFnaW5nLXlvdXItd29yay1vbi1naXRodWIvZmlsZS1hdHRhY2htZW50cy1vbi1pc3N1ZXMtYW5kLXB1bGwtcmVxdWVzdHM=">attach<i class="fa fa-external-link-alt"></i></span> images or documents to GitHub issues for free image hosting.</p>
+<h2 id="Math-rendering"><a class="header-anchor" href="#Math-rendering"></a>Math rendering</h2>
+<p>See <a href="/template-hexo-next/Hexo/math/" title="math rendering">math rendering</a>.</p>
+<h2 id="Extended-syntax"><a class="header-anchor" href="#Extended-syntax"></a>Extended syntax</h2>
+<p>See <a href="/template-hexo-next/Hexo/adv-syntax/" title="extended syntax">extended syntax</a>.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>This is a digital footnote <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>This is a footnote with &quot;label&quot; <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>First post</title>
+    <url>/template-hexo-next/Test/first-post/</url>
+    <content><![CDATA[<p>The stuff you'll see in the front page.</p>
+<span id="more"></span>
+<p>Set <code>sticky: 100</code> in the frontmatter to pin this post on top.</p>
+]]></content>
+      <categories>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Setup a free personal blog using Hexo</title>
+    <url>/template-hexo-next/Hexo/hexo-setup/</url>
+    <content><![CDATA[<p>Notes to set up a <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span> blog site, as a reminder for the future me. 😁</p>
+<span id="more"></span>
+<h2 id="Setup-Node-JS"><a class="header-anchor" href="#Setup-Node-JS"></a>Setup Node JS</h2>
+<p>Install the node package manager (npm) if you want to preview/build the website on the local machine.</p>
+<ul>
+<li>Windows: Download and install from the <span class="exturl" data-url="aHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkLw==">official website<i class="fa fa-external-link-alt"></i></span>.</li>
+<li>MacOS / Linux: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL252bS1zaC9udm0=">nvm<i class="fa fa-external-link-alt"></i></span> is recommended to install and manage your local version(s) of npm.</li>
+</ul>
+<h2 id="The-easy-way-copy-my-template-site"><a class="header-anchor" href="#The-easy-way-copy-my-template-site"></a>The easy way: copy my template site</h2>
+<p>This template includes these features:</p>
+<ul>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo<i class="fa fa-external-link-alt"></i></span> static site generator.</p>
+</li>
+<li>
+<p>Fast and elegant <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy8=">Next theme<i class="fa fa-external-link-alt"></i></span>.</p>
+</li>
+<li>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3d6cGFuL2hleG8tcmVuZGVyZXItbWFya2Rvd24taXQ=">markdown-it renderer<i class="fa fa-external-link-alt"></i></span> and KaTeX math.</p>
+</li>
+<li>
+<p>GitHub actions and GitLab CI included.</p>
+</li>
+<li>
+<p>Hosting on GitHub: click <code>use as template</code> to copy this template under your GitHub account.</p>
+</li>
+<li>
+<p>Hosting on GitLab: import this repo.</p>
+</li>
+</ul>
+<p>In <code>_config.yml</code>, change <code>baseurl</code> and your personal settings.</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/repo-name/</span>  <span class="comment"># or &quot;/&quot; for personal/group website (username.github.io)</span></span><br></pre></td></tr></table></figure>
+<p>Also see <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvY29uZmlndXJhdGlvbi5odG1s">Hexo configuration<i class="fa fa-external-link-alt"></i></span> for more details.</p>
+<p>In <code>_config.next.yml</code>, change the settings of the Next theme. Also see <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoZW1lLXNldHRpbmdzLw==">Next theme settings<i class="fa fa-external-link-alt"></i></span> for further customizations.</p>
+<h2 id="The-self-serving-way"><a class="header-anchor" href="#The-self-serving-way"></a>The self-serving way</h2>
+<p>Also checkout <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL2dldHRpbmctc3RhcnRlZC8=">getting started in Hexo Next<i class="fa fa-external-link-alt"></i></span>.</p>
+<h3 id="Hexo-website-and-and-Next-theme"><a class="header-anchor" href="#Hexo-website-and-and-Next-theme"></a>Hexo website and and Next theme</h3>
+<ol>
+<li>install the <code>hexo</code> command:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>setup <code>Next</code> theme:</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Created the website in `blog` folder.</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Hexo npm dependencies</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Next theme</span></span><br><span class="line">npm install hexo-theme-next</span><br><span class="line"></span><br><span class="line"><span class="comment"># Copy the theme config file for future customizations</span></span><br><span class="line">cp ./node_modules/hexo-theme-next/_config.yml _config.next.yml</span><br><span class="line"></span><br><span class="line"><span class="comment"># Remove the original landscape theme</span></span><br><span class="line">rm -rf ./themes/landscape</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>use <code>Next</code> theme in the config</li>
+</ol>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>preview your setup.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Test your setup.</span></span><br><span class="line"><span class="comment"># This command will open a browser and visit http://localhost:4000.</span></span><br><span class="line"><span class="comment"># Ctrl+C to exit</span></span><br><span class="line">hexo clean &amp;&amp; hexo server -o --debug</span><br></pre></td></tr></table></figure>
+<p>You can start blogging using the <code>hexo new </code>command e.g. <code>hexo new post hello</code> or start to customize your settings. Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to exit preview.</p>
+<h3 id="Browser-sync"><a class="header-anchor" href="#Browser-sync"></a>Browser sync</h3>
+<p>By default, you need to press the refresh button when you make a change to the markdown file, which is tedious.</p>
+<p>The <code>hexo-browsersync</code> package comes to the rescue. It issues browser refresh automatically upon filesystem changes in your website in <code>server</code> mode.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-browsersync</span><br></pre></td></tr></table></figure>
+<h3 id="Useful-hexo-plugins"><a class="header-anchor" href="#Useful-hexo-plugins"></a>Useful hexo plugins</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Word and read time counter</span></span><br><span class="line">npm i hexo-word-counter</span><br><span class="line"></span><br><span class="line"><span class="comment"># Local search</span></span><br><span class="line">npm i hexo-generator-searchdb</span><br><span class="line"></span><br><span class="line"><span class="comment"># Emoji tag plugin</span></span><br><span class="line">npm i hexo-filter-emoji</span><br></pre></td></tr></table></figure>
+<h3 id="Switch-to-a-better-renderer"><a class="header-anchor" href="#Switch-to-a-better-renderer"></a>Switch to a better renderer</h3>
+<p>The default renderer <code>hexo-renderer-marked</code> does not fully support LaTeX math syntax. Thus, we could switch to a better one.</p>
+<p>See the <a href="/template-hexo-next/Hexo/math/" title="math rendering">math rendering</a> post to switch the renderer and setup the math typesetting libraries.</p>
+<h4 id="Additional-markdown-it-settings"><a class="header-anchor" href="#Additional-markdown-it-settings"></a>Additional markdown-it settings</h4>
+<p>Install some other useful plugins:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i markdown-it-imsize markdown-it-named-headings markdown-it-task-checkbox markdown-it-kbd</span><br></pre></td></tr></table></figure>
+<p>Add the <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvLXJlbmRlcmVyLW1hcmtkb3duLWl0L3dpa2kvQWR2YW5jZWQtQ29uZmlndXJhdGlvbg==">settings<i class="fa fa-external-link-alt"></i></span> of <code>hexo-renderer-markdown-it</code> in <code>_config.yml</code> like this:</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-abbr</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-footnote</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-ins</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-deflist</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-imsize</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-mark</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-task-checkbox</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-named-headings</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;@iktakahiro/markdown-it-katex&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-kbd</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-deflist</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">markdown-it-emoji</span></span><br><span class="line">      <span class="attr">options:</span></span><br><span class="line">        <span class="attr">shortcuts:</span> &#123;&#125;</span><br><span class="line">  <span class="attr">anchors:</span></span><br><span class="line">    <span class="comment"># Minimum level for ID creation. (Ex. h2 to h6)</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span></span><br><span class="line">    <span class="comment"># A suffix that is prepended to the number given if the ID is repeated.</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="comment"># If `true`, creates an anchor tag with a permalink besides the heading.</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Class used for the permalink anchor tag.</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">header-anchor</span></span><br><span class="line">    <span class="comment"># Set to &#x27;right&#x27; to add permalink after heading</span></span><br><span class="line">    <span class="attr">permalinkSide:</span> <span class="string">&#x27;left&#x27;</span></span><br><span class="line">    <span class="comment"># The symbol used to make the permalink</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="comment"># Transform anchor to (1) lower case; (2) upper case</span></span><br><span class="line">    <span class="attr">case:</span> <span class="number">0</span></span><br><span class="line">    <span class="comment"># Replace space with a character</span></span><br><span class="line">    <span class="attr">separator:</span> <span class="string">&#x27;-&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="Deployment"><a class="header-anchor" href="#Deployment"></a>Deployment</h3>
+<div class="tabs" id="deploy"><ul class="nav-tabs"><li class="tab active"><a href="#deploy-1">GitHub pages</a></li><li class="tab"><a href="#deploy-2">GitLab pages</a></li></ul><div class="tab-content"><div class="tab-pane active" id="deploy-1"><p>Create a file <code>.github/workflows/gh-pages.yml</code> for GitHub actions.</p>
+<p>Also see <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3BlYWNlaXJpcy9hY3Rpb25zLWdoLXBhZ2Vz">GitHub action for GitHub pages<i class="fa fa-external-link-alt"></i></span></p>
+<h4 id="With-pandoc"><a class="header-anchor" href="#With-pandoc"></a>With pandoc</h4>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">github</span> <span class="string">pages</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">NODE_ENV:</span> <span class="string">production</span></span><br><span class="line">  <span class="attr">PDC_VER:</span> <span class="string">&quot;2.11.3.1&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Build</span> <span class="string">website</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Restore</span> <span class="string">last</span> <span class="string">modified</span> <span class="string">time</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">&quot;git ls-files -z | while read -d &#x27;&#x27; path; do touch -d \&quot;$(git log -1 --format=\&quot;@%ct\&quot; \&quot;$path\&quot;)\&quot; \&quot;$path\&quot;; done&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/setup-node@v2.1.4</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">&#x27;14&#x27;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">Dependencies</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">path:</span> <span class="string">~/.npm</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;**/package-lock.json&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Pandoc</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">wget</span> <span class="string">-qO-</span> <span class="string">https://github.com/jgm/pandoc/releases/download/$&#123;PDC_VER&#125;/pandoc-$&#123;PDC_VER&#125;-linux-amd64.tar.gz</span> <span class="string">|</span> <span class="string">sudo</span> <span class="string">tar</span> <span class="string">xvz</span> <span class="string">--strip-components</span> <span class="number">1</span> <span class="string">-C</span> <span class="string">/usr/local</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">website</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">ci</span> <span class="string">&amp;&amp;</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line">        <span class="attr">full_commit_message:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.head_commit.message</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="With-markdown-it"><a class="header-anchor" href="#With-markdown-it"></a>With markdown-it</h4>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">github</span> <span class="string">pages</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">NODE_ENV:</span> <span class="string">production</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Build</span> <span class="string">website</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Restore</span> <span class="string">last</span> <span class="string">modified</span> <span class="string">time</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">&quot;git ls-files -z | while read -d &#x27;&#x27; path; do touch -d \&quot;$(git log -1 --format=\&quot;@%ct\&quot; \&quot;$path\&quot;)\&quot; \&quot;$path\&quot;; done&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/setup-node@v2.1.4</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">node-version:</span> <span class="string">&#x27;14&#x27;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">Dependencies</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">path:</span> <span class="string">~/.npm</span></span><br><span class="line">        <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-$&#123;&#123;</span> <span class="string">hashFiles(&#x27;**/package-lock.json&#x27;)</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line">          <span class="string">$&#123;&#123;</span> <span class="string">runner.os</span> <span class="string">&#125;&#125;-node-</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span> <span class="string">website</span></span><br><span class="line">      <span class="attr">run:</span> <span class="string">npm</span> <span class="string">ci</span> <span class="string">&amp;&amp;</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">      <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">      <span class="attr">with:</span></span><br><span class="line">        <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line">        <span class="attr">full_commit_message:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.head_commit.message</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="deploy-2"><p>Create a file <code>.gitlab-ci.yml</code> for GitLab CI/CD. Also see the <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLmdpdGxhYi5jb20vZWUvdXNlci9wcm9qZWN0L3BhZ2VzLw==">documentation<i class="fa fa-external-link-alt"></i></span> of GitLab pages.</p>
+<h4 id="With-pandoc"><a class="header-anchor" href="#With-pandoc"></a>With pandoc</h4>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># https://hub.docker.com/r/tarampampam/node/</span></span><br><span class="line"><span class="attr">image:</span> <span class="string">tarampampam/node:lts-alpine</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Cache modules in between jobs: https://docs.gitlab.com/ee/ci/caching/#caching-nodejs-dependencies</span></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">$&#123;CI_COMMIT_REF_SLUG&#125;</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">.npm/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">variables:</span></span><br><span class="line">  <span class="attr">NODE_ENV:</span> <span class="string">&quot;production&quot;</span></span><br><span class="line">  <span class="attr">PDC_VER:</span> <span class="string">&quot;2.11.3.1&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&quot;git ls-files -z | while read -d &#x27;&#x27; path; do touch -d \&quot;$(git log -1 --format=\&quot;@%ct\&quot; \&quot;$path\&quot;)\&quot; \&quot;$path\&quot;; done&quot;</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&quot;wget -qO- https://github.com/jgm/pandoc/releases/download/$&#123;PDC_VER&#125;/pandoc-$&#123;PDC_VER&#125;-linux-amd64.tar.gz | tar xvz --strip-components 1 -C /usr/local&quot;</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">npm</span> <span class="string">ci</span> <span class="string">--cache</span> <span class="string">.npm</span> <span class="string">--prefer-offline</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"></span><br><span class="line"><span class="attr">test:</span></span><br><span class="line">  <span class="attr">stage:</span> <span class="string">test</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;Done&quot;</span></span><br><span class="line">  <span class="attr">except:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pages:</span></span><br><span class="line">  <span class="attr">stage:</span> <span class="string">build</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">apk</span> <span class="string">add</span> <span class="string">--update</span> <span class="string">brotli</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">find</span> <span class="string">public</span> <span class="string">-type</span> <span class="string">f</span> <span class="string">-regex</span> <span class="string">&#x27;.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$&#x27;</span> <span class="string">-exec</span> <span class="string">gzip</span>   <span class="string">-f</span> <span class="string">-k</span> &#123;&#125; <span class="string">\;</span> <span class="string">||</span> <span class="string">echo</span> <span class="string">&#x27;Gzip failed. Skipping...&#x27;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">find</span> <span class="string">public</span> <span class="string">-type</span> <span class="string">f</span> <span class="string">-regex</span> <span class="string">&#x27;.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$&#x27;</span> <span class="string">-exec</span> <span class="string">brotli</span> <span class="string">-f</span> <span class="string">-k</span> &#123;&#125; <span class="string">\;</span> <span class="string">||</span> <span class="string">echo</span> <span class="string">&#x27;Brotli failed. Skipping...&#x27;</span></span><br><span class="line">  <span class="attr">artifacts:</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">main</span></span><br></pre></td></tr></table></figure>
+<h4 id="With-markdown-it"><a class="header-anchor" href="#With-markdown-it"></a>With markdown-it</h4>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># https://hub.docker.com/r/tarampampam/node/</span></span><br><span class="line"><span class="attr">image:</span> <span class="string">tarampampam/node:lts-alpine</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Cache modules in between jobs: https://docs.gitlab.com/ee/ci/caching/#caching-nodejs-dependencies</span></span><br><span class="line"><span class="attr">cache:</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">$&#123;CI_COMMIT_REF_SLUG&#125;</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">.npm/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">variables:</span></span><br><span class="line">  <span class="attr">NODE_ENV:</span> <span class="string">&quot;production&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">before_script:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&quot;git ls-files -z | while read -d &#x27;&#x27; path; do touch -d \&quot;$(git log -1 --format=\&quot;@%ct\&quot; \&quot;$path\&quot;)\&quot; \&quot;$path\&quot;; done&quot;</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">npm</span> <span class="string">ci</span> <span class="string">--cache</span> <span class="string">.npm</span> <span class="string">--prefer-offline</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"></span><br><span class="line"><span class="attr">test:</span></span><br><span class="line">  <span class="attr">stage:</span> <span class="string">test</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">echo</span> <span class="string">&quot;Done&quot;</span></span><br><span class="line">  <span class="attr">except:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pages:</span></span><br><span class="line">  <span class="attr">stage:</span> <span class="string">build</span></span><br><span class="line">  <span class="attr">script:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">apk</span> <span class="string">add</span> <span class="string">--update</span> <span class="string">brotli</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">find</span> <span class="string">public</span> <span class="string">-type</span> <span class="string">f</span> <span class="string">-regex</span> <span class="string">&#x27;.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$&#x27;</span> <span class="string">-exec</span> <span class="string">gzip</span>   <span class="string">-f</span> <span class="string">-k</span> &#123;&#125; <span class="string">\;</span> <span class="string">||</span> <span class="string">echo</span> <span class="string">&#x27;Gzip failed. Skipping...&#x27;</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">find</span> <span class="string">public</span> <span class="string">-type</span> <span class="string">f</span> <span class="string">-regex</span> <span class="string">&#x27;.*\.\(htm\|html\|txt\|text\|js\|css\|svg\|xml\)$&#x27;</span> <span class="string">-exec</span> <span class="string">brotli</span> <span class="string">-f</span> <span class="string">-k</span> &#123;&#125; <span class="string">\;</span> <span class="string">||</span> <span class="string">echo</span> <span class="string">&#x27;Brotli failed. Skipping...&#x27;</span></span><br><span class="line">  <span class="attr">artifacts:</span></span><br><span class="line">    <span class="attr">paths:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">public</span></span><br><span class="line">  <span class="attr">only:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">main</span></span><br></pre></td></tr></table></figure></div></div></div>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>gitlab</tag>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LaTeX Math rendering</title>
+    <url>/template-hexo-next/Hexo/math/</url>
+    <content><![CDATA[<p>Rendering math equations in LaTeX style.</p>
+<span id="more"></span>
+<h2 id="Change-the-Hexo-markdown-renderer"><a class="header-anchor" href="#Change-the-Hexo-markdown-renderer"></a>Change the Hexo markdown renderer</h2>
+<p>This guide is partly from the <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RoaXJkLXBhcnR5LXNlcnZpY2VzL21hdGgtZXF1YXRpb25zLmh0bWw=">Hexo Next docs for math equations<i class="fa fa-external-link-alt"></i></span></p>
+<p>Uninstall the default Markdown renderer (<code>hexo-renderer-marked</code>) because it confuses <code>\</code> and <code>_</code> character in the math equations as Markdown syntax.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm un hexo-renderer-marked</span><br></pre></td></tr></table></figure>
+<p>Then you can choose between the <code>pandoc</code> (with MathJax) or the <code>markdown-it</code> (with KaTeX) renderer.</p>
+<div class="tabs" id="renderer"><ul class="nav-tabs"><li class="tab active"><a href="#renderer-1">pandoc + MathJax</a></li><li class="tab"><a href="#renderer-2">markdown-it</a></li></ul><div class="tab-content"><div class="tab-pane active" id="renderer-1"><h3 id="Pandoc-and-MathJax"><a class="header-anchor" href="#Pandoc-and-MathJax"></a>Pandoc and MathJax</h3>
+<p>Install <a href="https://pandoc.org/installing.html"><code>pandoc</code></a> and the Hexo renderer.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-renderer-pandoc</span><br></pre></td></tr></table></figure>
+<p>And activate MathJax in the theme config.</p>
+<figure class="highlight yaml"><figcaption><span>_config.next.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br></pre></td></tr></table></figure>
+<p>Set <code>mathjax: true</code> in the page frontmatter to load the MathJax library.</p>
+<p>You can also install <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL25leHQtdGhlbWUvaGV4by1maWx0ZXItbWF0aGpheA==">hexo-filter-mathjax<i class="fa fa-external-link-alt"></i></span> for rendering math equations server-side.</p></div><div class="tab-pane" id="renderer-2"><h3 id="Katex"><a class="header-anchor" href="#Katex"></a>Katex</h3>
+<p>⚠️ Chemical expressions are not supported in this setup.</p>
+<ol>
+<li>Install the <code>markdown-it</code> renderer and KaTeX plugin.</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-renderer-markdown-it @iktakahiro/markdown-it-katex</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>Add KaTeX to <code>markdown-it</code>'s plugin list:</li>
+</ol>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&quot;@iktakahiro/markdown-it-katex&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">(Other</span> <span class="string">plugins</span> <span class="string">...)</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>enable KaTeX in the theme config.</li>
+</ol>
+<figure class="highlight yaml"><figcaption><span>_config.next.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: none | ams | all</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br></pre></td></tr></table></figure>
+<p>Set <code>mathjax: true</code> (yesp, not <code>katex</code>) in the frontmatter to load the math library.</p>
+<h3 id="MathJax-Server-side-rendering-alternative"><a class="header-anchor" href="#MathJax-Server-side-rendering-alternative"></a>MathJax (Server-side rendering alternative)</h3>
+<p>Install <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL01ha2VyR1lUL21hcmtkb3duLWl0LWxhdGV4MmltZw==">markdown-it-latex2img<i class="fa fa-external-link-alt"></i></span> to convert math expressions to SVG images online with MathJax at <span class="exturl" data-url="aHR0cHM6Ly9tYXRoLm5vdy5zaC8=">https://math.now.sh/<i class="fa fa-external-link-alt"></i></span>.</p>
+<p>⚠️ However, it does not play well with dark mode. The text will still be black and invisible. And it may mess with fancybox image gallery.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i hexo-renderer-markdown-it markdown-it-latex2img</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-latex2img</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">(other</span> <span class="string">plugins...)</span></span><br></pre></td></tr></table></figure></div></div></div>
+<h2 id="Math-rendering-Guide"><a class="header-anchor" href="#Math-rendering-Guide"></a>Math rendering Guide</h2>
+<p>For examples, see <span class="exturl" data-url="aHR0cHM6Ly9tYXRoLm1ldGEuc3RhY2tleGNoYW5nZS5jb20vcXVlc3Rpb25zLzUwMjAvbWF0aGpheC1iYXNpYy10dXRvcmlhbC1hbmQtcXVpY2stcmVmZXJlbmNl">MathJax quick reference<i class="fa fa-external-link-alt"></i></span> and <span class="exturl" data-url="aHR0cHM6Ly93d3cuaW50bWF0aC5jb20vY2c1L2thdGV4LW1hdGhqYXgtY29tcGFyaXNvbi5waHA=">KaTeX performance test<i class="fa fa-external-link-alt"></i></span>.</p>
+<h2 id="Inline-math-examples"><a class="header-anchor" href="#Inline-math-examples"></a>Inline math examples</h2>
+<p>Enclosed by <code>$</code>...<code>$</code></p>
+<ul>
+<li>Pythagoras theorem: <img data-src="https://math.now.sh?inline=a%5E2%2Bb%5E2%3Dc%5E2" style="display:inline-block;margin: 0;"/></li>
+<li>Sum of arithmetic sequence: <img data-src="https://math.now.sh?inline=S_%7Bn%7D%3Dn%20a_%7B1%7D%2B%5Cfrac%7Bn%28n-1%29%7D%7B2%7D%20d%2C%20n%20%5Cin%20N%5E%7B*%7D" style="display:inline-block;margin: 0;"/></li>
+<li>Fundamental theorem of calculus: <img data-src="https://math.now.sh?inline=%5Cint_%7Ba%7D%5E%7Bb%7D%20f%28x%29%20d%20x%3DF(b)-F(a)%3D%5Cleft.F(x)%5Cright%7C_%7Ba%7D%20%5E%7Bb%7D" style="display:inline-block;margin: 0;"/></li>
+<li>Binomial distribution: <img data-src="https://math.now.sh?inline=P_%7Bn%7D%28k%29%3DC_%7Bn%7D%5E%7Bk%7D%20p%5E%7Bk%7D%20q%5E%7Bn-k%7D%20%5Cquad%20k%3D0%2C1%2C2%20%5Cldots%20%5Cldots%2C%20n" style="display:inline-block;margin: 0;"/></li>
+<li>Greek letters: <img data-src="https://math.now.sh?inline=%5CGamma%5C%20%5CDelta%5C%20%5CTheta%5C%20%5CLambda%5C%20%5CXi%5C%20%5CPi%5C%20%5CSigma%5C%20%5CUpsilon%5C%20%5CPhi%5C%20%5CPsi%5C%20%5COmega" style="display:inline-block;margin: 0;"/></li>
+</ul>
+<h2 id="Block-math-examples"><a class="header-anchor" href="#Block-math-examples"></a>Block math examples</h2>
+<p>Enclosed by <code>$$</code>...<code>$$</code></p>
+<h3 id="Repeating-fractions"><a class="header-anchor" href="#Repeating-fractions"></a>Repeating fractions</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Cfrac%7B1%7D%7B%5CBigl%28%5Csqrt%7B%5Cphi%20%5Csqrt%7B5%7D%7D-%5Cphi%5CBigr%29%20e%5E%7B%5Cfrac25%20%5Cpi%7D%7D%20%5Cequiv%201%2B%5Cfrac%7Be%5E%7B-2%5Cpi%7D%7D%20%7B1%2B%5Cfrac%7Be%5E%7B-4%5Cpi%7D%7D%20%7B1%2B%5Cfrac%7Be%5E%7B-6%5Cpi%7D%7D%20%7B1%2B%5Cfrac%7Be%5E%7B-8%5Cpi%7D%7D%20%7B1%2B%5Ccdots%7D%20%7D%20%7D%20%7D%0A" /></p><h3 id="Summation-notation"><a class="header-anchor" href="#Summation-notation"></a>Summation notation</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Cleft%28%20%5Csum_%7Bk%3D1%7D%5En%20a_k%20b_k%20%5Cright%29%5E2%20%5Cleq%20%5Cleft(%20%5Csum_%7Bk%3D1%7D%5En%20a_k%5E2%20%5Cright)%20%5Cleft(%20%5Csum_%7Bk%3D1%7D%5En%20b_k%5E2%20%5Cright)%0A" /></p><h3 id="Probability-density-of-normal-distribution"><a class="header-anchor" href="#Probability-density-of-normal-distribution"></a>Probability density of normal distribution</h3>
+<p style=""><img data-src="https://math.now.sh?from=f%28x%29%20%3D%20%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%5Csigma%7De%5E%7B-%5Cfrac%7B(x-%5Cmu)%5E2%7D%7B2%5Csigma%5E2%7D%7D%0A" /></p><h3 id="The-ratio-of-two-consecutive-numbers-in-Fibonacci-Sequence"><a class="header-anchor" href="#The-ratio-of-two-consecutive-numbers-in-Fibonacci-Sequence"></a>The ratio of two consecutive numbers in Fibonacci Sequence</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Clim_%7Bn%5Cto%20%5Cinfty%7D%5Cfrac%7BA_%7Bn-1%7D%7D%7BA_n%7D%3D%5Cfrac%7B%5Csqrt%7B5%7D-1%7D%7B2%7D.%0A" /></p><h3 id="Factorisation"><a class="header-anchor" href="#Factorisation"></a>Factorisation</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%28x%E2%88%921%29(x%E2%88%923)%26%3Dx%5E2%E2%88%924x%2B3%20%5Ccr%0A%26%3Dx%5E2%E2%88%924x%2B4%E2%88%921%20%5Ccr%0A%26%3D(x%E2%88%922)%5E2%E2%88%921%0A%5Cend%7Baligned%7D%0A" /></p><h3 id="Dirichlet-function"><a class="header-anchor" href="#Dirichlet-function"></a>Dirichlet function</h3>
+<p style=""><img data-src="https://math.now.sh?from=D%28x%29%3D%0A%5Cbegin%7Bcases%7D%0A1%2C%26%20x%20%5Cin%20Q%20%5Ccr%0A0%2C%26%20x%20%5Cnotin%20Q%0A%5Cend%7Bcases%7D%0A" /></p><h3 id="Gauss-s-law"><a class="header-anchor" href="#Gauss-s-law"></a>Gauss's law</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Ciiint_%7B%5COmega%7D%5Cleft%28%5Cfrac%7B%5Cpartial%20P%7D%7B%5Cpartial%20x%7D%2B%5Cfrac%7B%5Cpartial%20Q%7D%7B%5Cpartial%20y%7D%2B%5Cfrac%7B%5Cpartial%20R%7D%7B%5Cpartial%20z%7D%5Cright%29%20d%20v%3D%5Ciint_%7B%5CSigma%7D%20P%20d%20y%20d%20z%2BQ%20d%20z%20d%20x%2BR%20d%20x%20d%20y%0A" /></p><h3 id="Vandermonde-matrix"><a class="header-anchor" href="#Vandermonde-matrix"></a>Vandermonde matrix</h3>
+<p style=""><img data-src="https://math.now.sh?from=D_%7Bn-1%7D%3D%5Cleft%7C%5Cbegin%7Barray%7D%7Bcccc%7D%0A1%20%26%201%20%26%20%5Cdots%20%26%201%20%5Ccr%0Ax_%7B2%7D%20%26%20x_%7B3%7D%20%26%20%5Cdots%20%26%20x_%7Bn%7D%20%5Ccr%0A%5Cvdots%20%26%20%5Cvdots%20%26%20%26%20%5Cvdots%20%5Ccr%0Ax_%7B2%7D%5E%7Bn-2%7D%20%26%20x_%7B3%7D%5E%7Bn-2%7D%20%26%20%5Cdots%20%26%20x_%7Bn%7D%5E%7Bn-2%7D%0A%5Cend%7Barray%7D%5Cright%7C%3D%5Cprod_%7B2%20%5Cleq%20j%3Ci%20%5Cleq%20n%7D%5Cleft%28x_%7Bi%7D-x_%7Bj%7D%5Cright%29" /></p><h3 id="System-of-linear-equations"><a class="header-anchor" href="#System-of-linear-equations"></a>System of linear equations</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Cleft%5Clbrace%0A%5Cbegin%7Baligned%7D%0Aa_%7B11%7D%20x_%7B1%7D%2Ba_%7B12%7D%20x_%7B2%7D%2B%5Ccdots%2Ba_%7B1%20n%7D%20x_%7Bn%7D%20%26%3Db_%7B1%7D%20%5Ccr%0Aa_%7B21%7D%20x_%7B1%7D%2Ba_%7B22%7D%20x_%7B2%7D%2B%5Ccdots%2Ba_%7B2%20n%7D%20x_%7Bn%7D%20%26%3Db_%7B2%7D%20%5Ccr%0A%5Ccdots%20%5Ccdots%20%5Ccdots%20%5Ccr%0Aa_%7Bm%201%7D%20x_%7B1%7D%2Ba_%7Bm%202%7D%20x_%7B2%7D%2B%5Ccdots%2Ba_%7Bm%20n%7D%20x_%7Bn%7D%20%26%3Db_%7Bm%7D%0A%5Cend%7Baligned%7D%0A%5Cright%5Crbrace%0A" /></p><h3 id="Lorenz-Equations"><a class="header-anchor" href="#Lorenz-Equations"></a>Lorenz Equations</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cdot%7Bx%7D%20%26%3D%20%5Csigma%28y-x%29%20%5Ccr%0A%5Cdot%7By%7D%20%26%3D%20%5Crho%20x%20-%20y%20-%20xz%20%5Ccr%0A%5Cdot%7Bz%7D%20%26%3D%20-%5Cbeta%20z%20%2B%20xy%0A%5Cend%7Baligned%7D%0A" /></p><h3 id="Cross-Product"><a class="header-anchor" href="#Cross-Product"></a>Cross Product</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Cmathbf%7BV%7D_1%20%5Ctimes%20%5Cmathbf%7BV%7D_2%20%3D%20%20%5Cbegin%7Bvmatrix%7D%0A%5Cmathbf%7Bi%7D%20%26%5Cmathbf%7Bj%7D%20%26%5Cmathbf%7Bk%7D%20%5Ccr%0A%5Cfrac%7B%5Cpartial%20X%7D%7B%5Cpartial%20u%7D%20%26%20%5Cfrac%7B%5Cpartial%20Y%7D%7B%5Cpartial%20u%7D%20%260%20%5Ccr%0A%5Cfrac%7B%5Cpartial%20X%7D%7B%5Cpartial%20v%7D%20%26%20%5Cfrac%7B%5Cpartial%20Y%7D%7B%5Cpartial%20v%7D%20%260%0A%5Cend%7Bvmatrix%7D%0A" /></p><h3 id="Maxwell-s-Equations"><a class="header-anchor" href="#Maxwell-s-Equations"></a>Maxwell's Equations</h3>
+<p style=""><img data-src="https://math.now.sh?from=%5Cbegin%7Baligned%7D%0A%5Cnabla%20%5Ctimes%20%5Cvec%7B%5Cmathbf%7BB%7D%7D%20-%5C%2C%20%5Cfrac1c%5C%2C%20%5Cfrac%7B%5Cpartial%5Cvec%7B%5Cmathbf%7BE%7D%7D%7D%7B%5Cpartial%20t%7D%20%26%3D%20%5Cfrac%7B4%5Cpi%7D%7Bc%7D%5Cvec%7B%5Cmathbf%7Bj%7D%7D%20%5Ccr%0A%5Cnabla%20%5Ccdot%20%5Cvec%7B%5Cmathbf%7BE%7D%7D%20%26%3D%204%20%5Cpi%20%5Crho%20%5Ccr%0A%5Cnabla%20%5Ctimes%20%5Cvec%7B%5Cmathbf%7BE%7D%7D%5C%2C%20%2B%5C%2C%20%5Cfrac1c%5C%2C%20%5Cfrac%7B%5Cpartial%5Cvec%7B%5Cmathbf%7BB%7D%7D%7D%7B%5Cpartial%20t%7D%20%26%3D%20%5Cvec%7B%5Cmathbf%7B0%7D%7D%20%5Ccr%0A%5Cnabla%20%5Ccdot%20%5Cvec%7B%5Cmathbf%7BB%7D%7D%20%26%3D%200%20%5Cend%7Baligned%7D%0A" /></p>]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>mathjax</tag>
+        <tag>katex</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>About Me</title>
+    <url>/template-hexo-next/about/index.html</url>
+    <content><![CDATA[<p>Say something about you.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Archives</title>
+    <url>/template-hexo-next/archives/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Categories</title>
+    <url>/template-hexo-next/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Tags</title>
+    <url>/template-hexo-next/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+</search>

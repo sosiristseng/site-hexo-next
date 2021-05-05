@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+<link rel="stylesheet" href="/template-hexo-next/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;sosiristseng.github.io&quot;,&quot;root&quot;:&quot;&#x2F;template-hexo-next&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;template-hexo-next&#x2F;images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:true,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;always&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:true,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:true,&quot;lazyload&quot;:true,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:&quot;disqus&quot;,&quot;storage&quot;:true,&quot;lazyload&quot;:true,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:true,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;},&quot;path&quot;:&quot;&#x2F;template-hexo-next&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script>
+<meta name="description" content="This post shows tag plugins, an extension of Markdown syntax, in Hexo static site generator and the Next theme documentation">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Extended Markdown syntax">
+<meta property="og:url" content="https://sosiristseng.github.io/Hexo/adv-syntax/">
+<meta property="og:site_name" content="Site title">
+<meta property="og:description" content="This post shows tag plugins, an extension of Markdown syntax, in Hexo static site generator and the Next theme documentation">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://octodex.github.com/images/stormtroopocat.jpg">
+<meta property="article:published_time" content="2020-06-29T17:47:33.000Z">
+<meta property="article:modified_time" content="2021-01-04T16:58:02.000Z">
+<meta property="article:author" content="Your name">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="tag plugin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://octodex.github.com/images/stormtroopocat.jpg">
+
+
+<link rel="canonical" href="https://sosiristseng.github.io/Hexo/adv-syntax/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;sosiristseng.github.io&#x2F;Hexo&#x2F;adv-syntax&#x2F;&quot;,&quot;path&quot;:&quot;Hexo&#x2F;adv-syntax&#x2F;&quot;,&quot;title&quot;:&quot;Extended Markdown syntax&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Extended Markdown syntax | Site title</title><script src="/template-hexo-next/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/template-hexo-next/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/template-hexo-next/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Site title</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Site subtitle</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/template-hexo-next/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/template-hexo-next/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/template-hexo-next/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">9</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/template-hexo-next/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">2</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/template-hexo-next/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">5</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quotes"><span class="nav-number">1.</span> <span class="nav-text">Quotes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Centered-Quote"><span class="nav-number">1.1.</span> <span class="nav-text">Centered Quote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pull-Quote"><span class="nav-number">1.2.</span> <span class="nav-text">Pull Quote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Block-Quote"><span class="nav-number">1.3.</span> <span class="nav-text">Block Quote</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-blocks"><span class="nav-number">2.</span> <span class="nav-text">Code blocks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-tag-plugin"><span class="nav-number">2.1.</span> <span class="nav-text">Hexo tag plugin</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-gist"><span class="nav-number">2.2.</span> <span class="nav-text">Github gist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Include-code"><span class="nav-number">2.3.</span> <span class="nav-text">Include code</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Link-to-other-post"><span class="nav-number">3.</span> <span class="nav-text">Link to other post</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Image"><span class="nav-number">4.</span> <span class="nav-text">Image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Videos"><span class="nav-number">5.</span> <span class="nav-text">Videos</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Direct-URL"><span class="nav-number">5.1.</span> <span class="nav-text">Direct URL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YouTube-videos"><span class="nav-number">5.2.</span> <span class="nav-text">YouTube videos</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vimeo"><span class="nav-number">5.3.</span> <span class="nav-text">Vimeo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF-files"><span class="nav-number">6.</span> <span class="nav-text">PDF files</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Note"><span class="nav-number">7.</span> <span class="nav-text">Note</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Header"><span class="nav-number">7.1.</span> <span class="nav-text">Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Default-Header"><span class="nav-number">7.2.</span> <span class="nav-text">Default Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Primary-Header"><span class="nav-number">7.3.</span> <span class="nav-text">Primary Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Info-Header"><span class="nav-number">7.4.</span> <span class="nav-text">Info Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Success-Header"><span class="nav-number">7.5.</span> <span class="nav-text">Success Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Warning-Header"><span class="nav-number">7.6.</span> <span class="nav-text">Warning Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Danger-Header"><span class="nav-number">7.7.</span> <span class="nav-text">Danger Header</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#No-icon-note"><span class="nav-number">7.8.</span> <span class="nav-text">No icon note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Codeblock-in-note"><span class="nav-number">7.9.</span> <span class="nav-text">Codeblock in note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Table-in-Note"><span class="nav-number">7.10.</span> <span class="nav-text">Table in Note</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tabs"><span class="nav-number">8.</span> <span class="nav-text">Tabs</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Label"><span class="nav-number">9.</span> <span class="nav-text">Label</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Button"><span class="nav-number">10.</span> <span class="nav-text">Button</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Link-Grid"><span class="nav-number">11.</span> <span class="nav-text">Link Grid</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Others"><span class="nav-number">12.</span> <span class="nav-text">Others</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Your name</p>
+  <div class="site-description" itemprop="description">Site description</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/template-hexo-next/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/template-hexo-next/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/template-hexo-next/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tLyM=" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;#"><i class="fab fa-github fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9naXRsYWIuY29tLyM=" title="GitLab → https:&#x2F;&#x2F;gitlab.com&#x2F;#"><i class="fab fa-gitlab fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="bWFpbHRvOnVzZXJAbWFpbC5jb20=" title="E-Mail → mailto:user@mail.com"><i class="fa fa-envelope fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93ZWliby5jb20vIw==" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;#"><i class="fab fa-weibo fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9wbHVzLmdvb2dsZS5jb20vIw==" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;#"><i class="fab fa-google fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS8j" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;#"><i class="fab fa-twitter fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLyM=" title="FB Page → https:&#x2F;&#x2F;www.facebook.com&#x2F;#"><i class="fab fa-facebook fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9zdGFja292ZXJmbG93LmNvbS8j" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;#"><i class="fab fa-stack-overflow fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly95b3V0dWJlLmNvbS8j" title="YouTube → https:&#x2F;&#x2F;youtube.com&#x2F;#"><i class="fab fa-youtube fa-fw"></i></span>
+      </span>
+      <span class="links-of-author-item">
+        <span class="exturl" data-url="aHR0cHM6Ly9pbnN0YWdyYW0uY29tLyM=" title="Instagram → https:&#x2F;&#x2F;instagram.com&#x2F;#"><i class="fab fa-instagram fa-fw"></i></span>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <span class="exturl cc-opacity" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC8="><img src="/template-hexo-next/images/cc-by-nc-sa.svg" alt="Creative Commons"></span>
+  </div>
+
+
+  <div class="links-of-blogroll site-overview-item animated">
+    <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://sosiristseng.github.io/" title="https:&#x2F;&#x2F;sosiristseng.github.io">Wen-Wei Tech Blog</a>
+        </li>
+    </ul>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="Back to top">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <span class="exturl github-corner" data-url="aHR0cHM6Ly9naXRodWIuY29tL3Nvc2lyaXN0c2VuZy90ZW1wbGF0ZS1oZXhvLW5leHQ=" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></span>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://sosiristseng.github.io/Hexo/adv-syntax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/template-hexo-next/images/avatar.gif">
+      <meta itemprop="name" content="Your name">
+      <meta itemprop="description" content="Site description">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Site title">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Extended Markdown syntax
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-06-29 17:47:33" itemprop="dateCreated datePublished" datetime="2020-06-29T17:47:33+00:00">2020-06-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-04 16:58:02" itemprop="dateModified" datetime="2021-01-04T16:58:02+00:00">2021-01-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/template-hexo-next/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>7.9k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>7 mins.</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>This post shows tag plugins, an extension of Markdown syntax, in Hexo static site generator and the Next theme <span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZw==">documentation<i class="fa fa-external-link-alt"></i></span></p>
+<span id="more"></span>
+<p>The following sections will be</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">What you write in Markdown</span><br></pre></td></tr></table></figure>
+<p>What would be rendered</p>
+<h2 id="Quotes"><a class="header-anchor" href="#Quotes"></a>Quotes</h2>
+<h3 id="Centered-Quote"><a class="header-anchor" href="#Centered-Quote"></a>Centered Quote</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zLyNDZW50ZXJlZC1RdW90ZQ==">Centered Quote@Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% centerquote %&#125;Something&#123;% endcenterquote %&#125;</span><br><span class="line">&lt;!-- Or in short --&gt;</span><br><span class="line">&#123;% cq %&#125;Something&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="blockquote-center">
+<p>Elegant in code, simple in core</p>
+
+</blockquote>
+<h3 id="Pull-Quote"><a class="header-anchor" href="#Pull-Quote"></a>Pull Quote</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNQdWxsLVF1b3Rl">Pull Quote@Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<p>Similar to the regular markdown <code>&gt;</code> quote.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pullquote %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endpullquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote class="pullquote"><p>content</p>
+</blockquote>
+<h3 id="Block-Quote"><a class="header-anchor" href="#Block-Quote"></a>Block Quote</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNCbG9jay1RdW90ZQ==">Block Quote @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<p>With author and book title.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote David Levithan, Wide Awake %&#125;</span><br><span class="line">Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+<h2 id="Code-blocks"><a class="header-anchor" href="#Code-blocks"></a>Code blocks</h2>
+<h3 id="Hexo-tag-plugin"><a class="header-anchor" href="#Hexo-tag-plugin"></a>Hexo tag plugin</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNDb2RlLUJsb2Nr">Code Block @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] [additional options] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% codeblock <span class="emphasis">_.compact lang:javascript http://underscorejs.org/#compact Underscore.js %&#125;</span></span><br><span class="line"><span class="emphasis">_</span>.compact([0, 1, false, 2, &#x27;&#x27;, 3]);</span><br><span class="line">=&gt; [1, 2, 3]</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><figcaption><span>_.compact</span><span class="exturl" data-url="aHR0cDovL3VuZGVyc2NvcmVqcy5vcmcvI2NvbXBhY3Q=">Underscore.js<i class="fa fa-external-link-alt"></i></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.compact([<span class="number">0</span>, <span class="number">1</span>, <span class="literal">false</span>, <span class="number">2</span>, <span class="string">&#x27;&#x27;</span>, <span class="number">3</span>]);</span><br><span class="line">=&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="Github-gist"><a class="header-anchor" href="#Github-gist"></a>Github gist</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNHaXN0">Gist @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% gist stefanopalmieri/cdd42d4bd9c806c644de7e7ca86e59b0 %&#125;</span><br></pre></td></tr></table></figure>
+<script src="//gist.github.com/stefanopalmieri/cdd42d4bd9c806c644de7e7ca86e59b0.js"></script>
+<h3 id="Include-code"><a class="header-anchor" href="#Include-code"></a>Include code</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNJbmNsdWRlLUNvZGU=">Include Code @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<p>The directory containing code is defined at <code>code_dir</code> option in <code>_config.yml</code>, default to <code>code_dir: downloads/code</code>, corresponding to <code>$&#123;SITE&#125;/source/downloads/code</code></p>
+<div class="note default"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include<span class="emphasis">_code [title] [lang:language] [from:line] [to:line] path/to/file %&#125;</span></span><br></pre></td></tr></table></figure></div>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include<span class="emphasis">_code lang:bash bootstrap-conda.sh %&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><figcaption><span>bootstrap-conda.sh</span><a href="/template-hexo-next/code/bootstrap-conda.sh">view raw</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line">CONDA_PATH=<span class="string">&quot;<span class="variable">${HOME}</span>/conda&quot;</span></span><br><span class="line">CONDA_SH=<span class="string">&quot;<span class="variable">${CONDA_PATH}</span>/etc/profile.d/conda.sh&quot;</span></span><br><span class="line">CONDA_URL=<span class="string">&quot;https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh&quot;</span></span><br><span class="line"></span><br><span class="line">wget -O /tmp/conda.sh <span class="string">&quot;<span class="variable">${CONDA_URL}</span>&quot;</span></span><br><span class="line">bash /tmp/conda.sh -bup <span class="string">&quot;<span class="variable">${CONDA_PATH}</span>&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> <span class="string">&quot;<span class="variable">${CONDA_SH}</span>&quot;</span></span><br><span class="line">conda activate base</span><br><span class="line">conda init bash zsh</span><br><span class="line">conda config --add channels conda-forge</span><br><span class="line">conda config --<span class="built_in">set</span> channel_priority strict</span><br><span class="line">conda config --<span class="built_in">set</span> default_threads <span class="string">&quot;<span class="subst">$(nproc)</span>&quot;</span></span><br><span class="line">conda config --<span class="built_in">set</span> auto_activate_base <span class="literal">false</span></span><br><span class="line">conda update -n base conda --yes</span><br><span class="line">conda update --all --yes</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install commonly-used packages</span></span><br><span class="line">conda install jupyterlab seaborn scipy numpy pandas numba matplotlib --yes</span><br></pre></td></tr></table></figure>
+<h2 id="Link-to-other-post"><a class="header-anchor" href="#Link-to-other-post"></a>Link to other post</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMjSW5jbHVkZS1Qb3N0cw==">Include Posts @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% post<span class="emphasis">_link filename [title] [escape]  %&#125;</span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis"></span></span><br><span class="line"><span class="emphasis">&#123;% post_</span>link emoji &quot;Emoji support&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<a href="#">Post not found: ssg/emoji Emoji support</a>
+<h2 id="Image"><a class="header-anchor" href="#Image"></a>Image</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCM=">Image@Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% img [class names] /path/to/image [width] [height] &#x27;&quot;title text&quot; &quot;alt text&quot;&#x27; %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% img https://octodex.github.com/images/stormtroopocat.jpg 200 200 &#x27;&quot;The Stormtroopocat&quot; &quot;Alt text&quot;&#x27; %&#125;</span><br></pre></td></tr></table></figure>
+<img data-src="https://octodex.github.com/images/stormtroopocat.jpg" class="" width="200" height="200" title="The Stormtroopocat" alt="Alt text">
+<h2 id="Videos"><a class="header-anchor" href="#Videos"></a>Videos</h2>
+<h3 id="Direct-URL"><a class="header-anchor" href="#Direct-URL"></a>Direct URL</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL3ZpZGVvLmh0bWw=">video @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% video https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c4/Physicsworks.ogv/Physicsworks.ogv.240p.vp9.webm %&#125;</span><br></pre></td></tr></table></figure>
+<video src="https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c4/Physicsworks.ogv/Physicsworks.ogv.240p.vp9.webm" preload="metadata" controlslist="nodownload" controls playsinline poster=""></video>
+<h3 id="YouTube-videos"><a class="header-anchor" href="#YouTube-videos"></a>YouTube videos</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNZb3VUdWJl">YouTube @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube JtUAAXe<span class="emphasis">_0VI %&#125;</span></span><br></pre></td></tr></table></figure>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/JtUAAXe_0VI" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="Vimeo"><a class="header-anchor" href="#Vimeo"></a>Vimeo</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNWaW1lbw==">Vimeo @ Hexo<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% vimeo 253989945 %&#125;</span><br></pre></td></tr></table></figure>
+<div class="video-container"><iframe src="https://player.vimeo.com/video/253989945" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h2 id="PDF-files"><a class="header-anchor" href="#PDF-files"></a>PDF files</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL3BkZi5odG1s">pdf @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<p>You'll need to enable <code>pdf</code> support in next theme's config</p>
+<figure class="highlight yaml"><figcaption><span>next/_config.next.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">pdf:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">height:</span> <span class="string">500px</span>  <span class="comment"># Default height</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf url [height] %&#125;</span><br></pre></td></tr></table></figure>
+<div class="note warning"><ol>
+<li>Only browsers supporting PDF embedding are supported.</li>
+<li>PDF file loading may be block by the <span class="exturl" data-url="aHR0cHM6Ly9kZXZlbG9wZXIubW96aWxsYS5vcmcvZW4tVVMvZG9jcy9XZWIvSFRUUC9DT1JT">CORS<i class="fa fa-external-link-alt"></i></span> policy.</li>
+</ol>
+</div>
+<h2 id="Note"><a class="header-anchor" href="#Note"></a>Note</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL25vdGUuaHRtbA==">note @ Next<i class="fa fa-external-link-alt"></i></span>. Similar to <span class="exturl" data-url="aHR0cHM6Ly9odWdvbG92ZWl0LmNvbS90aGVtZS1kb2N1bWVudGF0aW9uLWV4dGVuZGVkLXNob3J0Y29kZXMvIzQtYWRtb25pdGlvbg==">admonitions @ Hugo LoveIt<i class="fa fa-external-link-alt"></i></span>.</p>
+<figure class="highlight yml"><figcaption><span>_config.next.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Note tag (bs-callout)</span></span><br><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="comment"># Note tag style values:</span></span><br><span class="line">  <span class="comment">#  - simple    bs-callout old alert style. Default.</span></span><br><span class="line">  <span class="comment">#  - modern    bs-callout new (v2-v3) alert style.</span></span><br><span class="line">  <span class="comment">#  - flat      flat callout style with background, like on Mozilla or StackOverflow.</span></span><br><span class="line">  <span class="comment">#  - disabled  disable all CSS styles import of note tag.</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">simple</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).</span></span><br><span class="line">  <span class="comment"># Offset also applied to label tag variables. This option can work with disabled note tag.</span></span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note %&#125;</span><br><span class="line"><span class="section">### Header</span></span><br><span class="line">(without define class style)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default %&#125;</span><br><span class="line"><span class="section">### Default Header</span></span><br><span class="line">Welcome to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line"><span class="section">### Primary Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line"><span class="section">### Info Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="section">### Success Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line"><span class="section">### Warning Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line"><span class="section">### Danger Header</span></span><br><span class="line"><span class="strong">**Welcome**</span> to [<span class="string">Hexo!</span>](<span class="link">https://hexo.io</span>)</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info no-icon %&#125;</span><br><span class="line"><span class="section">### No icon note</span></span><br><span class="line">Note <span class="strong">**without**</span> icon: <span class="code">`note info no-icon`</span></span><br><span class="line"></span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">note info, note info, note info</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line"><span class="section">### Codeblock in note</span></span><br><span class="line">&#123;% code %&#125;</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">&#123;% endcode %&#125;</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note default %&#125;</span><br><span class="line"><span class="section">### Table in Note</span></span><br><span class="line">| 1 | 2 |</span><br><span class="line">| - | - |</span><br><span class="line">| 3 | 4 |</span><br><span class="line">| 5 | 6 |</span><br><span class="line">| 7 | 8 |</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<div class="note "><h3 id="Header"><a class="header-anchor" href="#Header"></a>Header</h3>
+<p>(without define class style)</p>
+</div>
+<div class="note default"><h3 id="Default-Header"><a class="header-anchor" href="#Default-Header"></a>Default Header</h3>
+<p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note primary"><h3 id="Primary-Header"><a class="header-anchor" href="#Primary-Header"></a>Primary Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note info"><h3 id="Info-Header"><a class="header-anchor" href="#Info-Header"></a>Info Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note success"><h3 id="Success-Header"><a class="header-anchor" href="#Success-Header"></a>Success Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note warning"><h3 id="Warning-Header"><a class="header-anchor" href="#Warning-Header"></a>Warning Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note danger"><h3 id="Danger-Header"><a class="header-anchor" href="#Danger-Header"></a>Danger Header</h3>
+<p><strong>Welcome</strong> to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo!<i class="fa fa-external-link-alt"></i></span></p>
+</div>
+<div class="note info no-icon"><h3 id="No-icon-note"><a class="header-anchor" href="#No-icon-note"></a>No icon note</h3>
+<p>Note <strong>without</strong> icon: <code>note info no-icon</code></p>
+<p>note info, note info, note info
+note info, note info, note info
+note info, note info, note info</p>
+</div>
+<div class="note success"><h3 id="Codeblock-in-note"><a class="header-anchor" href="#Codeblock-in-note"></a>Codeblock in note</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br><span class="line">code block in note tag</span><br></pre></td></tr></table></figure></div>
+<div class="note default"><h3 id="Table-in-Note"><a class="header-anchor" href="#Table-in-Note"></a>Table in Note</h3>
+<table>
+<thead>
+<tr>
+<th>1</th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Tabs"><a class="header-anchor" href="#Tabs"></a>Tabs</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL3RhYnMuaHRtbA==">tabs @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<div class="note default"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs Sixth Unique name %&#125;</span><br><span class="line">&lt;!-- tab Solution 1@text-width --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab Solution 2 @font --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab Solution 3@bold --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div>
+<div class="tabs" id="sixth-unique-name"><ul class="nav-tabs"><li class="tab active"><a href="#sixth-unique-name-1"><i class="fa fa-text-width"></i>Solution 1</a></li><li class="tab"><a href="#sixth-unique-name-2"><i class="fa fa-font"></i>Solution 2</a></li><li class="tab"><a href="#sixth-unique-name-3"><i class="fa fa-bold"></i>Solution 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="sixth-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="sixth-unique-name-2"><p><strong>This is Tab 2.</strong></p></div><div class="tab-pane" id="sixth-unique-name-3"><p><strong>This is Tab 3.</strong></p></div></div></div>
+<p>Define a tab via <code>&lt;!-- tab title @icon --&gt; ... &lt;!-- endtab --&gt;</code>. Both <code>title</code> and <code>font</code> are optional.</p>
+<h2 id="Label"><a class="header-anchor" href="#Label"></a>Label</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2xhYmVsLmh0bWw=">label @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<p>Similar to <code>==mark==</code> in <code>markdown-it</code>, but with more options.</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Lorem &#123;% label @ipsum %&#125; &#123;% label primary@dolor sit %&#125; amet, consectetur &#123;% label success@adipiscing elit, %&#125; sed &#123;% label info@do eiusmod %&#125; tempor incididunt ut labore et dolore magna aliqua.</span><br><span class="line"></span><br><span class="line">Ut enim <span class="emphasis">*&#123;% label warning @ad %&#125;*</span> minim veniam, quis <span class="strong">**&#123;% label danger@nostrud %&#125;**</span> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span><br><span class="line"></span><br><span class="line">Duis aute irure dolor in reprehenderit in voluptate ~~&#123;% label default @velit %&#125;~~ <span class="xml"><span class="tag">&lt;<span class="name">mark</span>&gt;</span></span>esse<span class="xml"><span class="tag">&lt;/<span class="name">mark</span>&gt;</span></span> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></pre></td></tr></table></figure>
+<p>Lorem <mark class="label ">ipsum</mark> <mark class="label primary">dolor sit</mark> amet, consectetur <mark class="label success">adipiscing elit,</mark> sed <mark class="label info">do eiusmod</mark> tempor incididunt ut labore et dolore magna aliqua.</p>
+<p>Ut enim <em><mark class="label warning">ad</mark></em> minim veniam, quis <strong><mark class="label danger">nostrud</mark></strong> exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate <s><mark class="label default">velit</mark></s> <mark>esse</mark> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2 id="Button"><a class="header-anchor" href="#Button"></a>Button</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2J1dHRvbi5odG1s">button @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn #, Text %&#125;&#123;% btn #, Text &amp; Title,, Title %&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- with icon --&gt;</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span>&#123;% btn #,, home %&#125;&#123;% btn #,, home %&#125;&#123;% btn #,, home %&#125;<span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span>&#123;% btn #, Text &amp; Icon (buggy), home %&#125;</span><br><span class="line">&#123;% btn #, Text &amp; Icon (fixed width), home fa-fw %&#125;<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<a class="btn" href="#">Text</a><a class="btn" href="#" title="Title">Text & Title</a>
+<div><a class="btn" href="#"><i class="fa fa-home"></i></a><a class="btn" href="#"><i class="fa fa-home"></i></a><a class="btn" href="#"><i class="fa fa-home"></i></a></div>
+<p><a class="btn" href="#"><i class="fa fa-home"></i>Text & Icon (buggy)</a>
+<a class="btn" href="#"><i class="fa fa-home fa-fw"></i>Text & Icon (fixed width)</a></p>
+<h2 id="Link-Grid"><a class="header-anchor" href="#Link-Grid"></a>Link Grid</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2xpbmstZ3JpZC5odG1s">link-grid @ Next<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">% Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | https://hexo.bootcss.com/logo.png</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br></pre></td></tr></table></figure>
+<div class="link-grid"><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a target="_blank" rel="noopener" href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a target="_blank" rel="noopener" href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a target="_blank" rel="noopener" href="https://theme-next.js.org/"></a>
+</div><div class="link-grid-container">
+<object class="link-grid-image" data="https://hexo.bootcss.com/logo.png"></object>
+<p>Theme NexT</p><p>Stay Simple. Stay NexT.</p>
+<a target="_blank" rel="noopener" href="https://theme-next.js.org/"></a>
+</div></div>
+<h2 id="Others"><a class="header-anchor" href="#Others"></a>Others</h2>
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL3poLXR3L2RvY3MvdGFnLXBsdWdpbnMuaHRtbCNpZnJhbWU=">iframes<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2dyb3VwLXBpY3R1cmVzLmh0bWw=">Group Pictures<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9kb2NzL3RhZy1wbHVnaW5zL2Nhbml1c2UuaHRtbA==">Caniuse<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/template-hexo-next/tags/markdown/" rel="tag"><i class="fa fa-tag"></i> markdown</a>
+              <a href="/template-hexo-next/tags/tag-plugin/" rel="tag"><i class="fa fa-tag"></i> tag plugin</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/template-hexo-next/Hexo/basic-syntax/" rel="prev" title="Basic Markdown syntax">
+                  <i class="fa fa-chevron-left"></i> Basic Markdown syntax
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/template-hexo-next/Hexo/math/" rel="next" title="LaTeX Math rendering">
+                  LaTeX Math rendering <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/template-hexo-next/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Your name</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Symbols count total">23k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">21 mins.</span>
+  </span>
+</div>
+  <div class="powered-by">Powered by <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0LmpzLm9yZy9waXNjZXMv">NexT.Pisces</span>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+<script src="/template-hexo-next/js/utils.js"></script><script src="/template-hexo-next/js/next-boot.js"></script><script src="/template-hexo-next/js/bookmark.js"></script>
+
+  
+<script src="/template-hexo-next/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/template-hexo-next/js/third-party/nprogress.js"></script>
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/quicklink@2.1.0/dist/quicklink.umd.js"></script>
+  <script class="next-config" data-name="quicklink" type="application/json">{&quot;enable&quot;:true,&quot;home&quot;:true,&quot;archive&quot;:true,&quot;delay&quot;:true,&quot;timeout&quot;:3000,&quot;priority&quot;:true,&quot;ignores&quot;:null,&quot;url&quot;:&quot;https:&#x2F;&#x2F;sosiristseng.github.io&#x2F;Hexo&#x2F;adv-syntax&#x2F;&quot;}</script>
+  <script src="/template-hexo-next/js/third-party/quicklink.js"></script>
+
+</body>
+</html>
